@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widgets/main_drawer.dart';
 import './recent_screen.dart';
 import './favorites_screen.dart';
 import './categories_screen.dart';
@@ -20,7 +21,9 @@ class _TabScreenState extends State<TabScreen> {
           bottom: TabBar(
             // labelColor:Theme.of(context).accentColor,
             unselectedLabelColor: Colors.black,
-            unselectedLabelStyle: TextStyle(fontWeight:FontWeight.bold,),
+            unselectedLabelStyle: TextStyle(
+              fontWeight: FontWeight.bold,
+            ),
             tabs: <Widget>[
               Tab(
                 icon: Icon(Icons.category),
@@ -44,6 +47,7 @@ class _TabScreenState extends State<TabScreen> {
             RecentScreen(),
           ],
         ),
+        drawer:MainDrawer(),
       ),
     );
   }
